@@ -10,7 +10,59 @@ sort: 2
 - 双星号: **text** 重点强调 (加粗)
 - 反引号: ``text`` 代码样式
 
+```
+*You can't have **bold** inside italic.*
+
+**A |substitution| inside bold.**
+
+*A :subscript:`subscripts` inside italic.*
+
+``Or, *italic* within literals.``
+
+:ref:`link with ``literal`` inside`
+```
+
+```note
+
+- You can’t have **bold* inside italic.*
+
+- A |substitution| inside bold.
+
+- A :subscript:`subscripts` inside italic.
+
+- Or, *italic* within literals.
+
+- link with ``literal` inside`
+```
+
+
 ## Latex公式
+
+### 配置
+在conf.py中添加：
+
+```
+sphinx.ext.imgmath   #将latex公式转成图片扩展包
+````
+### 语法
+
+```
+如果在主句中，添加公式，效果如下  :math:`dst\_data= (e^ {m1} , e^ {m2}, e^{m3} )`
+ 
+另起一行写公式，使用这种方式：
+ 
+ .. math::
+ 
+    dst\_data= (e^ {m1} , e^ {m2}, e^{m3} )
+```
+
+LaTex常用特殊符号对应表：<https://blog.csdn.net/caiandyong/article/details/53351737?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.pc_relevant_is_cache&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.pc_relevant_is_cache>
+
+
+```note
+- 公式中不能有Unicode字符，比如中文空格、中文标点符号等。
+- 特殊符号的输入：比如%，公式中不能直接输入%，需要加反斜线\%，其他请参见本页面中特殊符号列表。
+```
 
 ## 超链接
 
@@ -52,7 +104,6 @@ sdk概述参见 :ref:`sdk_overview` 章节介绍。
 
 ```
 .. _sdk_flush:
- 
 ```
 
 引用的地方：
@@ -68,14 +119,12 @@ sdk概述参见 :ref:`sdk_overview` 章节介绍。
 ```
 
 * _`ABCD_YECS`
-
 ```
 
 引用的地方：
 
 ```
 :ref:`ABCD_YECS<ABCD_YECS>`
-
 ```
 
 ### 为表格或者章节的引用添加编号
@@ -87,7 +136,6 @@ sdk概述参见 :ref:`sdk_overview` 章节介绍。
 :numref:`表 %s:<引用标签>` :ref:`引用标签`
 #引用图片语法
 :numref:`图 %s:<引用标签>` :ref:`引用标签`
-
 ```
 
 说明：
@@ -124,7 +172,6 @@ numfig_secnum_depth = 1
  :file: ./operator.csv
  :header-rows: 1
  :widths: 10 20 30
-
 ```
 ```note
 - 采用引入文件的方式，最好设置“widths”参数，否则当一行内容过长时表格的宽度可能超出页面的显示。
@@ -146,7 +193,6 @@ numfig_secnum_depth = 1
  
    "1","Abs","int,float16"
    "2","Acos","int,float32"
-
 ```
 
 参数说明可参考 <https://docutils.sourceforge.io/docs/ref/rst/directives.html#csv-table>
@@ -199,45 +245,31 @@ numfig_secnum_depth = 1
 'preamble': '''
 \\addto\\captionsenglish{\\renewcommand{\\chaptername}{}}
 \\LTcapwidth=500pt
-
 ```
-
-## 图片
 
 ## 源代码
 
-## 替换
+rst的文本块指令用的最多的为两个英文冒号，即“::”，但是该指令不会解析文本块中的rst指令，会把rst指令当作普通的文本显示，因此存在一定的局限性。
 
+如果文本块中有rst指令需要解析，一般我们会用“parsed-literal”这个指令，但是由“parsed-literal”指令生成的文本内容，在生成pdf后，文本内容不会添加外框。
 
-```note
-## This is a note
+使用“parsed-literal”指令生成pdf：
 
-Markdown is supported, Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines
-
-`inline code`
-
-[`inline code inside link`](./)
 ```
-
-
-
-```note
-This is note3
+.. |atf_source| replace:: #atf源码
+ 
+.. parsed-literal::
+ 
+    arm-trusted-firmware   |atf_source|
+    busybox                #busybox源码
+    cambricon              #cambricon 分区镜像文件
+    cndrv_pci              #PCIe主机端驱动cambricon_drv
+    linux                  #kernel内核源码使用
+    m0                     #m0源码
+    mlu220_build           #编译相关脚本，ramdisk源文件，cambricon源文件等
+    modulessrc             #驱动源文件
+    preboot                #preboot生成工具
+    resource               #edge包编译依赖文件
+    rootfs                 #rootfs文件目录
+    uboot                  #uboot源码
 ```
-
-```tip
-It’s bigger than a bread box.
-```
-
-```tip
-It’s tip 2
-```
-
-
-
-```danger
-Mad scientist at work!
-```
-
-![](./table.png)
-
