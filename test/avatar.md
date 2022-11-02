@@ -2,7 +2,7 @@
 sort: 7
 ---
 
-# Avatar Test
+# Sphinx常见错误
 
 ```
 {% raw %}{% avatar saowang %}{% endraw %}
