@@ -1,5 +1,5 @@
 ---
-sort: 3
+sort: 2
 ---
 
 # Doxygen & Breathe 笔记
@@ -7,6 +7,8 @@ sort: 3
 官网 <https://www.doxygen.nl/manual/index.html>
 
 ## 注释
+
+常用注释语法如下：
 
 - 简述（@brief)，简单介绍该接口的功能。
 
