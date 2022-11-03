@@ -37,7 +37,7 @@ on recurrent or convolutional layers. On both WMT 2014 English-to-German and WMT
 English-to-French translation tasks, we achieve a new state of the art. In the former task our best
 model outperforms even all previously reported ensembles.
 
-## 参考文献：
+## 参考文献
 
 <https://www.jianshu.com/p/e647d3a10d9c>
 
