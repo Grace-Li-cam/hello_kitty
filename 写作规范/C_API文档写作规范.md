@@ -2,7 +2,7 @@
 sort: 3
 ---
 
-# C API文档写作
+# C API文档写作规范
 
 ## ENUM
 

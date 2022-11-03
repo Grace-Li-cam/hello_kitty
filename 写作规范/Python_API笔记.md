@@ -1,8 +1,8 @@
 ---
-sort: 4
+sort: 5
 ---
 
-# Python API笔记
+# Python API文档配置及规范
 
 ## Sphinx编译环境搭建
 
