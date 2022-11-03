@@ -34,3 +34,5 @@ A broadcasted add: a [3, 1] times a [1, 4] gives a [3,4]
 ![](./broadcasting.png)
 
 Most of the time, broadcasting is both time and space efficient, as the broadcast operation never materializes the expanded tensors in memory.
+
+参考文献：<https://www.tensorflow.org/guide/tensor>
