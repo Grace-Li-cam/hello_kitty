@@ -2,6 +2,6 @@
 sort: 1
 ---
 
-# 写作规范
+# 芯片及图像处理
 
 {% include list.liquid all=true %}
