@@ -48,7 +48,7 @@ extensions中添加：'sphinx.ext.autodoc','sphinx.ext.autosummary','sphinx.ext.
 
 设置autosummary：autosummary_generate = True
 
-### autosummary文件
+### 使用autosummary
 
 1. 新建一个rst文件，用于存放autosummary指令，列出工程中的package名称。示例如下：
 
@@ -153,7 +153,7 @@ extensions中添加：'sphinx.ext.autodoc','sphinx.ext.autosummary','sphinx.ext.
 - API介绍：
 
   - 一句话的简要描述：注意第三人称单数。
-  - 详细的功能描述，描述中如果涉及参数等请使用 `` ``语法。
+  - 详细的功能描述，描述中如果涉及参数等请使用 \`` \``语法。
   - 使用业务场景。
   - 同类接口的使用区别。函数内部的实现原理描述、同类型函数之间的差异。
   - 如果有公式：
