@@ -4,6 +4,8 @@ sort: 3
 
 # Doxygen & Breathe 笔记
 
+官网 <https://www.doxygen.nl/manual/index.html>
+
 ## 注释
 
 - 简述（@brief)，简单介绍该接口的功能。
@@ -149,17 +151,8 @@ class::function_name()
 ```
 breathe_order_parameters_first = True
 ```
+## 运行
 
-**Highlight:**
-
-```scss
-:root {
-  @for $level from 1 through 12 {
-    @if $level % 4 == 0 {
-      --toc-#{$level}: #{darken($theme-white, 4 * 8.8%)};
-    } @else {
-      --toc-#{$level}: #{darken($theme-white, $level % 4 * 8.8%)};
-    }
-  }
-}
+```
+doxygen doxygfile
 ```
