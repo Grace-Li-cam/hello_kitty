@@ -26,7 +26,7 @@ sort: 2
 
 - You can’t have **bold* inside italic.*
 
-- A |substitution| inside bold.
+- A \|substitution\| inside bold.
 
 - A :subscript:`subscripts` inside italic.
 

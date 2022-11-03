@@ -26,7 +26,7 @@ sort: 3
 - 环境依赖（@par Requirements）
   描述使用该函数需要的头文件、动态库或静态库。如果没有需要写 None，但不可以删除这个章节。
 
-- 示例（@ par Example）
+- 示例（@example）
 
 ### 头文件中如何使用rst语法
 
@@ -61,6 +61,7 @@ sort: 3
    *
    * \endrst
    ```
+   
 ### 头文件内引用
 
 #### C struct, typdef, enum 引用：
@@ -156,3 +157,5 @@ breathe_order_parameters_first = True
 ```
 doxygen doxygfile
 ```
+
+编译时注意返回的报错信息。
