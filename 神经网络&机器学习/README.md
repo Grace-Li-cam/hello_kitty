@@ -2,6 +2,6 @@
 sort: 1
 ---
 
-# 芯片及图像处理
+# 神经网络&机器学习
 
 {% include list.liquid all=true %}
