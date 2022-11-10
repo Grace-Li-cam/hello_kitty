@@ -2,7 +2,7 @@
 sort: 5
 ---
 
-# Python API文档配置及规范
+# Python API文档配置及规范（个人总结）
 
 ## Sphinx编译环境搭建
 
